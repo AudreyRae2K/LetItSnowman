@@ -1,7 +1,36 @@
 body {
-    background-color: lightskyblue;
-    background-image: url(assets/SnowBackground.jpeg);
+	padding: 0;
+	margin: 0;
+	background-color: lightskyblue;
+		
 }
+
+.wrapper {
+	overflow: hidden;
+}
+
+.sliding-background {
+	background: url(./assets/SnowBackground.jpeg);
+	background-repeat: no-repeat;
+	height: 5076px;
+	background-size: cover;
+	/* background-position: center; */
+	width: 500vh;
+	animation: slide 10s linear infinite;
+	position: fixed;
+
+}
+
+@keyframes slide {
+	0% {
+		transform: translate3d(0, 0, 0)
+	}
+
+	100% {
+		transform: translate3d(0, -1692px, -1692px)
+	}
+}
+
 .pomPom {
     background-color: rgb(53, 15, 221);
     height: 50px;
@@ -12,7 +41,8 @@ body {
     bottom: 23em;
     top: 0em;
     margin: auto;
-    border-radius: 50%;
+	border-radius: 50%;
+	z-index: 1000;
 }
 .hat {
     background-color: rgb(53, 15, 221);
@@ -29,7 +59,7 @@ body {
 .brim {
     background-color: rgb(53, 15, 221);
     height: 50px;
-    width: 150px;
+    width: 160px;
     position: absolute;
     right: 0em;
     left: 0em;
@@ -73,7 +103,8 @@ body {
     bottom: 0em;
     top: 45em;
     margin: auto;
-    border-radius: 50%;
+	border-radius: 50%;
+	z-index: 1;
  }
 .carrot {
     background-color: orange;
@@ -91,7 +122,9 @@ body {
     border-radius: 0 0 40% 40%;
 }
 .goggles {
-    background-color:greenyellow;
+
+	background: linear-gradient(110deg, rgba(15, 143, 73, 0.986), rgb(237, 240, 54));
+	
     height: 50px;
     width: 150px;
     position: absolute;
@@ -106,18 +139,19 @@ body {
 
 .saucer{
     width: 400px;
-    height: 27px;
+    height: 30px;
 
     background-color: red;
     border-radius: 50%;
-    position: absolute;
-    left: 24em;
-    top: 57em;
-    bottom: 30em;
-    right: 0px;
-    position: fixed;
+	position: absolute;
+	right: 40%;
+    left: 40%;
+    top: 62em;
+    /* bottom: -10em; */
 
-    transform: rotate(0deg);
+    /* position: fixed; */
+
+    /* transform: rotate(0deg); */
 }
 
 
